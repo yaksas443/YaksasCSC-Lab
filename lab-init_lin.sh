@@ -16,7 +16,7 @@ mkdir $HOME/Documents/WorkDesk/yaksas
 
 #Installing Sublime-Text
 
-archii = $(uname -m)
+archii="$(uname -m)"
 
 if [ $archii = "x86_64" ]
 then
