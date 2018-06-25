@@ -16,9 +16,9 @@ mkdir $HOME/Documents/WorkDesk/yaksas
 
 #Installing Sublime-Text
 
-arch = $(uname -m)
+archi = $(uname -m)
 
-if [ $arch = "x86_64" ]
+if [ $archi = "x86_64" ]
 then
     wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
     dpkg -i sublime-text_build-3083_amd64.deb
