@@ -7,5 +7,12 @@ Tips for creating a Malware Analysis and Reverse Engineering Lab
 1. Create separate VLAN on LAN segment for all virtual machines hosted in this lab.
 2. Keep the NIC attached to the physical host disconnected by default.
 3. To transfer files in this lab, create a separate machine to be used as a file share between physical host and rest of the machines in this lab.
+4. Give the machines a unique name that would help in identifing the following:
+    a. Lab (Malware Analysis / Penetration Testing / Networking / IoT etc.)
+    b. Operating System
+    c. Version
+    d. Architecture
+    Example 1: MA_LabMachine_Win7SP1 
+    Example 2: MA_LabMachine_Win7SP1 x64
 
 */
