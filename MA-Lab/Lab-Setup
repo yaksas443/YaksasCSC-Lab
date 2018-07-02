@@ -1,0 +1,11 @@
+#This file describes the lab setup, and some tips, I use for Malware Analysis and Reverse Engineering stuff.
+
+/*
+
+Tips for creating a Malware Analysis and Reverse Engineering Lab
+
+1. Create separate VLAN on LAN segment for all virtual machines hosted in this lab.
+2. Keep the NIC attached to the physical host disconnected by default.
+3. To transfer files in this lab, create a separate machine to be used as a file share between physical host and rest of the machines in this lab.
+
+*/
