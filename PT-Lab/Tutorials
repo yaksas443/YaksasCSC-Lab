@@ -1,0 +1,83 @@
+Buffer Overflow
+
+  To get memory address of assemb instructions from standard windows DLL:
+
+    http://offset-db.com/
+
+Linux Enumeration
+
+    https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+
+    https://www.rebootuser.com/?p=1623
+
+Windows Enumeration
+
+  Places and commands
+
+    http://www.fuzzysecurity.com/tutorials/16.html
+
+    https://gist.github.com/sckalath/8dacd032b65404ef7411
+
+    https://gist.github.com/sckalath/8dacd032b65404ef7411
+
+  How windows file names are shorternd
+
+    https://support.microsoft.com/en-us/kb/142982
+
+  Net commands
+
+    https://www.nextofwindows.com/the-net-command-line-to-list-local-users-and-groups
+
+    http://www.handgrep.se/repository/cheatsheets/postexploitation/WindowsPost-Exploitation.pdf
+
+  Windows Domain Password requirements
+
+    https://technet.microsoft.com/en-us/library/hh994562%28v=ws.11%29.aspx
+
+  Windows Cmd
+
+    http://www.robvanderwoude.com/escapechars.php
+
+Reverse shell cheat sheets
+
+    http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+
+    https://github.com/tennc/webshell/blob/master/fuzzdb-webshell/asp/cmd.asp (ASP shells)
+
+
+SQLi Cheat sheet
+
+    http://pentestmonkey.net/category/cheat-sheet/sql-injection
+
+URL Encoding/Decoding
+
+    http://www.w3schools.com/tags/ref_urlencode.asp
+
+Post Exploitation Enumeration
+
+    http://www.cheat-sheets.org/saved-copy/Windows_folders_quickref.pdf
+
+    https://github.com/mubix/post-exploitation-wiki
+
+    https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/Draft/Privilege%20Escalation%20%26%20Post-Exploitation.md#generalpost
+
+Privilege Escalation Articles
+
+    http://www.admin-magazine.com/Articles/Understanding-Privilege-Escalation
+
+POP Commands
+
+    http://www.nthelp.com/pop_commands.htm
+
+Tcpdump usage
+
+    http://www.rationallyparanoid.com/articles/tcpdump.html
+
+Breaking out of jailed shells
+
+    https://netsec.ws/?p=337
+    https://speakerdeck.com/knaps/escape-from-shellcatraz-breaking-out-of-restricted-unix-shells
+    http://pentestmonkey.net/blog/rbash-scp
+
+
+
