@@ -9,3 +9,17 @@ Linux File Perm:
 Linux SUID:
 
     http://www.linuxnix.com/suid-set-suid-linuxunix/
+
+Pivoting from Windows Systems
+
+    To pivot from a windows system two tools are used: Plink and Fpipe
+
+        Tutorial: http://exploit.co.il/hacking/pivoting-into-a-network-using-plink-and-fpipe/
+
+    Offensive Security meterpreter portfwd:
+
+        https://www.offensive-security.com/metasploit-unleashed/portfwd/
+
+    Offensive Security meterpreter pivoting:
+
+        https://www.offensive-security.com/metasploit-unleashed/pivoting/
