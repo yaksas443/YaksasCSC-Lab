@@ -1,3 +1,11 @@
+Fuzzy-Security
+
+    Buffer Overflow - http://www.fuzzysecurity.com/tutorials/expDev/2.html
+    
+Fuzzing with Spike
+
+    http://sh3llc0d3r.com/vulnserver-fuzzing-with-spike/
+
 Package Meterpreter Payload as a Deb package
 
     https://www.offensive-security.com/metasploit-unleashed/binary-linux-trojan/
