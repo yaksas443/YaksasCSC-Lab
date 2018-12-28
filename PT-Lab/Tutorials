@@ -1,6 +1,10 @@
 OSCE:
 
     Writing ia32 alphanumeric shellcodes - http://phrack.org/issues/57/15.html
+    
+    Restricted SEH JMP backwards: https://h4554nalmusajjen.wordpress.com/2018/03/07/extra-mile-exercise-osce/
+    
+    Restricted SEH JMP backwards (28 bytes): https://www.kerrymilan.com/osce-vulnserver-lter/
 
 Fuzzy-Security
 
