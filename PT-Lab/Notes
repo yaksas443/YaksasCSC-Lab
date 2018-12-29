@@ -4,3 +4,10 @@ Machine code Assembly
 B8 04 00 00 00  mov eax,0x4
 66 B8 04 00     mov ax,0x4
 B0 04           mov al,0x4
+
+To zero out a register:
+
+mov eax,0x11223344
+sub eax,eax  //sets the flag
+
+xor eax, eax  //alternate way to zero register
