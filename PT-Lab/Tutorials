@@ -7,6 +7,8 @@ OSCE:
     Restricted SEH JMP backwards (28 bytes): https://www.kerrymilan.com/osce-vulnserver-lter/
     
     Why NOP Slide required before shellcode (FSTENV): https://reverseengineering.stackexchange.com/questions/15745/why-shell-code-only-with-nop-slide-working-for-me
+    
+    Fuzzing with Peach : http://www.flinkd.org/fuzzing-with-peach-part-1/
 
 Fuzzy-Security
 
