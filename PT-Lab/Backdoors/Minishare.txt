@@ -1,4 +1,4 @@
-Steps to backdoor Minshare.exe:
+Steps to backdoor Minshare.exe (version 1.4.1):
 
 1. Download Minshare.exe from this link https://www.exploit-db.com/apps/0ffe5385147edd1f9e7b460c6d7cb0a6-minishare-1.4.1.zip
 2. Open it in Immunity Debugger
