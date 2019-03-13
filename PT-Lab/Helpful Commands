@@ -1,3 +1,10 @@
 To upgrade pip
 
 python -m pip install --upgrade pip
+
+Install Pydasm:
+
+1. Download libdasm from https://github.com/jtpereyda/libdasm
+2. Extract and run following commands:
+3. python setup.py build_ext
+4. python setup.py install
