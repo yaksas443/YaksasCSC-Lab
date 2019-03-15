@@ -1,1 +1,7 @@
 Building IA32 'Unicode-Proof' Shellcodes - http://phrack.org/issues/61/11.html#article
+
+Bypassing Windows Hardware-enforced Data Execution Prevention  - http://uninformed.org/?v=2&a=4
+
+Safely Searching Process Virtual Address Space - http://www.hick.org/code/skape/papers/egghunt-shellcode.pdf
+
+Smashing The Stack For Fun And Profit - http://www-inst.eecs.berkeley.edu/~cs161/fa08/papers/stack_smashing.pdf
