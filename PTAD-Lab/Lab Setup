@@ -10,3 +10,9 @@ Building and Attacking an Active Directory lab with PowerShell	 - https://1337re
     Install-ADDSForest -CreateDnsDelegation:$false ` -DatabasePath "C:\Windows\NTDS" ` -DomainMode "Win2012R2" ` -DomainName "server1.hacklab.local" ` -DomainNetbiosName "server1" `  -ForestMode "Win2012R2" `  -InstallDns:$true `  -LogPath "C:\Windows\NTDS" `  -NoRebootOnCompletion:$false `  -SysvolPath "C:\Windows\SYSVOL" `  -Force:$true
     
     Install-WindowsFeature RSAT-ADDS
+  
+  Commands to add user to domain:
+  
+    net user ptadlab1 <password> /ADD /DOMAIN
+    
+    net group “Domain Admins” user1 /add
