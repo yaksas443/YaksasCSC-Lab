@@ -1,0 +1,12 @@
+
+Building and Attacking an Active Directory lab with PowerShell	 - https://1337red.wordpress.com/building-and-attacking-an-active-directory-lab-with-powershell/
+
+  Commands to Install AD on Windows Server 2016:
+  
+    Install-windowsfeature AD-domain-services
+
+    Import-Module ADDSDeployment
+
+    Install-ADDSForest -CreateDnsDelegation:$false ` -DatabasePath "C:\Windows\NTDS" ` -DomainMode "Win2012R2" ` -DomainName "server1.hacklab.local" ` -DomainNetbiosName "server1" `  -ForestMode "Win2012R2" `  -InstallDns:$true `  -LogPath "C:\Windows\NTDS" `  -NoRebootOnCompletion:$false `  -SysvolPath "C:\Windows\SYSVOL" `  -Force:$true
+    
+    Install-WindowsFeature RSAT-ADDS
