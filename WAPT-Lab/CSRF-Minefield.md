@@ -1,6 +1,6 @@
 # Welcome to CSRF Minefield!
 
-CSRF Minefield is an Ubuntu Server 18.04 based virtual machine, that is heavily ridden with Cross-Site Request Forgery (CSRF) vulnerabilities. This VM hosts 11 real-world webapplications wee found vulnerable to CSRF vulnerability and your aim is to find them and detonate them before they explode the target network.
+CSRF Minefield is an Ubuntu Server 18.04 based virtual machine, that is heavily ridden with Cross-Site Request Forgery (CSRF) vulnerabilities. This VM hosts 11 real-world web applications that were found vulnerable to CSRF vulnerability and your aim is to find them and detonate them before they explode the target network.
 
 ## What is CSRF?
 
@@ -47,8 +47,26 @@ Apache CouchDB 2.3.1
 5. VM login details: 
    - Username: ptlab
    - Password: ptlab
+   - To login as root: sudo su  //(password same as above)
 6. Start hunting!
+7. There might be a few vulnerabilities of other kind. Let's see if you can find them as well.
 
 In case you run into any troubles, contact me on @yaksas443 (twitter) or csc[at]yaksas[dot]in
 
 May the force be with you!
+
+# ---------------SPOILERS AHEAD!!--------------------
+
+Credits (vulnerability researchers):
+
+Bolt CMS 3.6.6 - [FelipeGaspar](https://www.exploit-db.com/exploits/46664)
+PilusCart 1.4.1 - [Gionathan Reale](https://www.exploit-db.com/exploits/46531)
+zzzphp CMS 1.6.1 - [Yang Chenglong](https://www.exploit-db.com/exploits/46488)
+CMSSite 1.0 - [Mr Winst0n](https://www.exploit-db.com/exploits/46480) 
+OOP CMS Blog 1.0 - [Mr Winst0n](https://www.exploit-db.com/exploits/46483)
+Integria IMS 5.0.83 - [Javier Olmedo](https://www.exploit-db.com/exploits/46013)
+ZeusCart 4.0 - [mqt](https://www.exploit-db.com/exploits/46027)
+WSTMart 2.0.8 - [linfeng](https://www.exploit-db.com/exploits/46036)
+Simple Online Hotel Reservation System - [Mr Winst0n](https://www.exploit-db.com/exploits/46463)
+OrientDB 3.0.17 GA Community Edition - [Ozer Goker](https://www.exploit-db.com/exploits/46517)
+Apache CouchDB 2.3.1 - [Ozer Goker](https://www.exploit-db.com/exploits/46595)
