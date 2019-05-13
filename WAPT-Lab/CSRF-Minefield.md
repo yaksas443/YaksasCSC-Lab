@@ -15,28 +15,28 @@ As a starting point, you can use the following resources by the OWASP Project:
 
 ## List of Web applications included in this version of CSRF Minefield (along with access details):
 
-Bolt CMS 3.6.6 
-- http://192.168.126.162/bolt | Username:admin Password:admin123
-PilusCart 1.4.1 
-- http://192.168.126.162/pilus | Username:admin Password:admin123
-zzzphp CMS 1.6.1 
-- http://192.168.126.162/zzzphp | Admin link: http://192.168.126.162/zzzphp/admin537/login.php | Username:admin Password:admin123
-CMSSite 1.0 
-- http://192.168.126.162/cmssite/ | Username:victor Password:victor
-OOP CMS Blog 1.0 
-- http://192.168.126.162/oop/ | Admin link: http://192.168.126.162/oop/admin | Username:admin Password:123
-Integria IMS 5.0.83 
-- http://192.168.126.162/integriaims/ | Username:admin Password:integria
-ZeusCart 4.0 
-- http://192.168.126.162/zeuscart/ | Admin link: http://192.168.126.162/zeuscart/admin | Username:admin Password:admin123
-WSTMart 2.0.8 
-- http://192.168.126.162/wstmart/ | Admin link: http://192.168.126.162/wstmart/admin.php | Username:admin Password:admin123
-Simple Online Hotel Reservation System 
-- http://192.168.126.162/hotelcal | Admin link: http://192.168.126.162/hotelcal/admin | Username:admin Password:admin
-OrientDB 3.0.17 GA Community Edition 
-- Command to start web app:/opt/orient/bin/server.sh | http://192.168.126.162:2480/studio/index.html | Username:root Password:toor
-Apache CouchDB 2.3.1
-- Command to start web app:/opt/couchdb/bin/couchdb | http://192.168.126.162:5984/_utils/index.html | Username:root Password:toor
+1. Bolt CMS 3.6.6 
+   - http://192.168.126.162/bolt | Username:admin Password:admin123
+2. PilusCart 1.4.1 
+   - http://192.168.126.162/pilus | Username:admin Password:admin123
+3. zzzphp CMS 1.6.1 
+   - http://192.168.126.162/zzzphp | Admin link: http://192.168.126.162/zzzphp/admin537/login.php | Username:admin Password:admin123
+4. CMSSite 1.0 
+   - http://192.168.126.162/cmssite/ | Username:victor Password:victor
+5. OOP CMS Blog 1.0 
+   - http://192.168.126.162/oop/ | Admin link: http://192.168.126.162/oop/admin | Username:admin Password:123
+6. Integria IMS 5.0.83 
+   - http://192.168.126.162/integriaims/ | Username:admin Password:integria
+7. ZeusCart 4.0 
+   - http://192.168.126.162/zeuscart/ | Admin link: http://192.168.126.162/zeuscart/admin | Username:admin Password:admin123
+8. WSTMart 2.0.8 
+   - http://192.168.126.162/wstmart/ | Admin link: http://192.168.126.162/wstmart/admin.php | Username:admin Password:admin123
+9. Simple Online Hotel Reservation System 
+   - http://192.168.126.162/hotelcal | Admin link: http://192.168.126.162/hotelcal/admin | Username:admin Password:admin
+10. OrientDB 3.0.17 GA Community Edition 
+   - Command to start web app:/opt/orient/bin/server.sh | http://192.168.126.162:2480/studio/index.html | Username:root Password:toor
+11. Apache CouchDB 2.3.1
+   - Command to start web app:/opt/couchdb/bin/couchdb | http://192.168.126.162:5984/_utils/index.html | Username:root Password:toor
 
 ## How to get started?
 
@@ -59,14 +59,14 @@ May the force be with you!
 
 Credits (vulnerability researchers):
 
-Bolt CMS 3.6.6 - [FelipeGaspar](https://www.exploit-db.com/exploits/46664)
-PilusCart 1.4.1 - [Gionathan Reale](https://www.exploit-db.com/exploits/46531)
-zzzphp CMS 1.6.1 - [Yang Chenglong](https://www.exploit-db.com/exploits/46488)
-CMSSite 1.0 - [Mr Winst0n](https://www.exploit-db.com/exploits/46480) 
-OOP CMS Blog 1.0 - [Mr Winst0n](https://www.exploit-db.com/exploits/46483)
-Integria IMS 5.0.83 - [Javier Olmedo](https://www.exploit-db.com/exploits/46013)
-ZeusCart 4.0 - [mqt](https://www.exploit-db.com/exploits/46027)
-WSTMart 2.0.8 - [linfeng](https://www.exploit-db.com/exploits/46036)
-Simple Online Hotel Reservation System - [Mr Winst0n](https://www.exploit-db.com/exploits/46463)
-OrientDB 3.0.17 GA Community Edition - [Ozer Goker](https://www.exploit-db.com/exploits/46517)
-Apache CouchDB 2.3.1 - [Ozer Goker](https://www.exploit-db.com/exploits/46595)
+1. Bolt CMS 3.6.6 - [FelipeGaspar](https://www.exploit-db.com/exploits/46664)
+2. PilusCart 1.4.1 - [Gionathan Reale](https://www.exploit-db.com/exploits/46531)
+3. zzzphp CMS 1.6.1 - [Yang Chenglong](https://www.exploit-db.com/exploits/46488)
+4. CMSSite 1.0 - [Mr Winst0n](https://www.exploit-db.com/exploits/46480) 
+5. OOP CMS Blog 1.0 - [Mr Winst0n](https://www.exploit-db.com/exploits/46483)
+6. Integria IMS 5.0.83 - [Javier Olmedo](https://www.exploit-db.com/exploits/46013)
+7. ZeusCart 4.0 - [mqt](https://www.exploit-db.com/exploits/46027)
+8. WSTMart 2.0.8 - [linfeng](https://www.exploit-db.com/exploits/46036)
+9. Simple Online Hotel Reservation System - [Mr Winst0n](https://www.exploit-db.com/exploits/46463)
+10. OrientDB 3.0.17 GA Community Edition - [Ozer Goker](https://www.exploit-db.com/exploits/46517)
+11. Apache CouchDB 2.3.1 - [Ozer Goker](https://www.exploit-db.com/exploits/46595)
