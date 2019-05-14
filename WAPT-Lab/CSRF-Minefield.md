@@ -34,9 +34,9 @@ As a starting point, you can use the following resources by the OWASP Project:
 9. Simple Online Hotel Reservation System 
    - http://192.168.126.162/hotelcal | Admin link: http://192.168.126.162/hotelcal/admin | Username:admin Password:admin
 10. OrientDB 3.0.17 GA Community Edition 
-   - Command to start web app:/opt/orient/bin/server.sh | http://192.168.126.162:2480/studio/index.html | Username:root Password:toor
+    - Command to start web app:/opt/orient/bin/server.sh | http://192.168.126.162:2480/studio/index.html | Username:root Password:toor
 11. Apache CouchDB 2.3.1
-   - Command to start web app:/opt/couchdb/bin/couchdb | http://192.168.126.162:5984/_utils/index.html | Username:root Password:toor
+    - Command to start web app:/opt/couchdb/bin/couchdb | http://192.168.126.162:5984/_utils/index.html | Username:root Password:toor
 
 ## How to get started?
 
