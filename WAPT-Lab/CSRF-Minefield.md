@@ -40,7 +40,7 @@ As a starting point, you can use the following resources by the OWASP Project:
 
 ## How to get started?
 
-1. Download the VM [from here](https://drive.google.com/file/d/1_PMlOsXkfl_2NuLhtoSu6ewHcNLKoje5/view?usp=sharing) and extract the Zip file.
+1. Download the VM [from here](http://bit.ly/csrfmfv1) and extract the Zip file.
 2. Import / Open OVF with VMWare Player or VMWare Workstation
 3. Run the VM
 4. Access the VM on IP address 192.168.126.162
