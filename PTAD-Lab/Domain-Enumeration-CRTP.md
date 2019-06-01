@@ -42,3 +42,14 @@
 - Get-ADComputer -Filter 'OperatingSystem -like "*Server 2016*"' -Properties OperatingSystem | select Name, OperatingSystem
 - Get-ADComputer -Filter * -Properties DNSHostName | %{Test-Connection -Count 1 -ComputerName $_.DNSHostName}
 - Get-ADComputer -Filter * -Properties *
+
+### Get all the groups in the current domain
+- Get-NetGroup
+- Get-NetGroup -Domain <targetdomain>
+- Get-NetGroup -FullData
+- Get-ADGroup -Filter | select Name
+- Get-ADGroup -Filter * -Properties *
+
+### Get all groups containing the word "admin" in group name
+Get-NetGroup *admin*
+Get-ADGroup -Filter 'Name -like "*admin*"' | select Name
