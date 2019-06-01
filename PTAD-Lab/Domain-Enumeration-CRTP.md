@@ -51,5 +51,5 @@
 - Get-ADGroup -Filter * -Properties *
 
 ### Get all groups containing the word "admin" in group name
-Get-NetGroup *admin*
-Get-ADGroup -Filter 'Name -like "*admin*"' | select Name
+- Get-NetGroup *admin*
+- Get-ADGroup -Filter 'Name -like "*admin*"' | select Name
