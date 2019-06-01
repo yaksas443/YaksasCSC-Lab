@@ -1,4 +1,4 @@
-##Get current domain
+#Get current domain
 Get-NetDomain (PowerView)
 Get-ADDomain (ActiveDirectory Module)
 
