@@ -28,3 +28,17 @@
 - Get-UserProperty Properties pwdlastset
 - Get-ADUser -Filter * -Properties * | select -First 1 | Get-Member -MemberType *Property | select Name
 - Get-ADUser -Filter * -Properties * | select name,@{expression={[datetime]::fromFileTime($_.pwdlastset)}}  
+
+### Search for a particular string in a user's attributes:
+- Find-UserField -SearchField Description -SearchTerm "built"
+- Get-ADUser -Filter 'Description -like "*built*"' -Properties Description | select name, Description
+
+### Get a list of computers in the current domain
+- Get-NetComputer
+- Get-NetComputer -OperatingSystem "*Server 2016*"
+- Get-NetComputer Ping
+- Get-NetComputer FullData
+- Get-ADComputer -Filter * | select Name
+- Get-ADComputer -Filter 'OperatingSystem -like "*Server 2016*"' -Properties OperatingSystem | select Name, OperatingSystem
+- Get-ADComputer -Filter * -Properties DNSHostName | %{Test-Connection -Count 1 -ComputerName $_.DNSHostName}
+- Get-ADComputer -Filter * -Properties *
