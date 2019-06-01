@@ -1,0 +1,11 @@
+_Get current domain
+Get-NetDomain (PowerView)
+Get-ADDomain (ActiveDirectory Module)
+
+_Get object of another domain
+Get-NetDomain Domain <domain>
+Get-ADDomain Identity <domain>
+
+_Get domain SID for the current domain
+Get-DomainSID
+(Get-ADDomain).DomainSID
