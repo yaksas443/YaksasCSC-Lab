@@ -1,3 +1,7 @@
+### To import a module
+
+Import-Module <module-name>
+
 ### Get current domain
 - Get-NetDomain (PowerView)
 - Get-ADDomain (ActiveDirectory Module)
