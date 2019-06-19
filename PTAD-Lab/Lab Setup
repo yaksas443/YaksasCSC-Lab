@@ -21,3 +21,5 @@ Building and Attacking an Active Directory lab with PowerShell	 - https://1337re
     net user ptadlab1 <password> /ADD /DOMAIN
     
     net group “Domain Admins” user1 /add
+
+To resolve "Specified domain already exists" - run NewSID  - https://www.experts-exchange.com/questions/26394641/DCPromo-The-Specified-Domain-Already-Exists.html
