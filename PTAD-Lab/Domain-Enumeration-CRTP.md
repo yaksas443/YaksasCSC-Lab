@@ -57,3 +57,15 @@ Import-Module <module-name>
 ### Get all groups containing the word "admin" in group name
 - Get-NetGroup *admin*
 - Get-ADGroup -Filter 'Name -like "*admin*"' | select Name
+
+### Get the ACLs associated with the specified object
+
+- Get-ObjectAcl -SamAccountName <Objectname> -ResolveGUIDs
+  
+ ### Get the ACLs associated with the specified prefix to be used for search
+ 
+ - Get-ObjectAcl -ADSprefix 'CN=Administrator,CN=Users' -Verbose
+ 
+  ### Get the ACLs associated with the specified prefix to be used for search
+ 
+ - Get-ObjectAcl -ADSprefix 'CN=Administrator,CN=Users' -Verbose
