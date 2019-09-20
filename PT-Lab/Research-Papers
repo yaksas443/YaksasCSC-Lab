@@ -5,3 +5,5 @@ Bypassing Windows Hardware-enforced Data Execution Prevention  - http://uninform
 Safely Searching Process Virtual Address Space - http://www.hick.org/code/skape/papers/egghunt-shellcode.pdf
 
 Smashing The Stack For Fun And Profit - http://www-inst.eecs.berkeley.edu/~cs161/fa08/papers/stack_smashing.pdf
+
+Exploitation With WriteProcessMemory() - Yet Another DEP Trick  - https://www.exploit-db.com/papers/13660
