@@ -1,0 +1,2 @@
+- Import-Module does not work on PSRemoting
+- Over pass the hash must be performed from a Powershell session that is running as Administrator.
