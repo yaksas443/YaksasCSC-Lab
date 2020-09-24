@@ -8,11 +8,12 @@ passwd
 
 echo 'test "$(ps -ocommand= -p $PPID | awk '"'"'{print $1}'"'"')" == '"'"'script'"'"' || (script -f $HOME/logs/$(date +"%d-%b-%y_%H-%M-%S").${HOSTNAME:-$(hostname)}.$$.${RANDOM}_shell.log)' >> /etc/bash.bashrc
 mkdir $HOME/logs
+sudo -u kali mkdir /home/kali/logs
 
 #Creating WorkDesk
 
-mkdir $HOME/Documents/WorkDesk
-mkdir $HOME/Documents/WorkDesk/yaksas
+sudo -u kali mkdir /home/kali/Documents/WorkDesk
+sudo -u kali mkdir /home/kali/Documents/WorkDesk/yaksas
 
 #Installing Sublime-Text
 
