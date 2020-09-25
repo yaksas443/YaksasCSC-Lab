@@ -1,7 +1,7 @@
 ### Mentalist
-git clone https://github.com/sc0tfree/mentalist.git
-cd mentalist
-python3 setup.py install
+- git clone https://github.com/sc0tfree/mentalist.git
+- cd mentalist
+- python3 setup.py install
 
 ### Mimikatz
 https://github.com/gentilkiwi/mimikatz/releases
