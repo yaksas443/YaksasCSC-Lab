@@ -35,7 +35,7 @@ cp /home/kali/Documents/WorkDesk/Tools/PowerUp/PowerUp.ps1 /home/kali/Documents/
 
 mkdir /home/kali/Documents/WorkDesk/Tools/nmap-static
 
-wget https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/nmap -O /home/kali/Documents/WorkDesk/Tools/nmap-static/nmap
+wget https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/nmap -O /home/kali/Documents/WorkDesk/Tools/nmap-static/nmap
 
 cp /home/kali/Documents/WorkDesk/Tools/nmap-static/nmap /home/kali/Documents/WorkDesk/Tools/dist/nmap
 
@@ -44,7 +44,7 @@ cp /home/kali/Documents/WorkDesk/Tools/nmap-static/nmap /home/kali/Documents/Wor
 
 mkdir /home/kali/Documents/WorkDesk/Tools/nc64
 
-wget https://github.com/int0x33/nc.exe/blob/master/nc64.exe -O /home/kali/Documents/WorkDesk/Tools/nc64/nc64.exe
+wget https://github.com/int0x33/nc.exe/raw/master/nc64.exe -O /home/kali/Documents/WorkDesk/Tools/nc64/nc64.exe
 
 cp /home/kali/Documents/WorkDesk/Tools/nc64/nc64.exe /home/kali/Documents/WorkDesk/Tools/dist/nc64.exe
 
@@ -53,7 +53,7 @@ cp /home/kali/Documents/WorkDesk/Tools/nc64/nc64.exe /home/kali/Documents/WorkDe
 
 mkdir /home/kali/Documents/WorkDesk/Tools/SharpHound
 
-wget https://github.com/BloodHoundAD/BloodHound/blob/master/Ingestors/SharpHound.exe -O /home/kali/Documents/WorkDesk/Tools/SharpHound/SharpHound.exe
+wget https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.exe -O /home/kali/Documents/WorkDesk/Tools/SharpHound/SharpHound.exe
 
 cp /home/kali/Documents/WorkDesk/Tools/SharpHound/SharpHound.exe /home/kali/Documents/WorkDesk/Tools/dist/SharpHound.exe
 
