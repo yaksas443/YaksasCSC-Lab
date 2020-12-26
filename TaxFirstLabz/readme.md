@@ -8,15 +8,15 @@ In this course, we look at an organization's security from a real-world adversar
 
 During an adversary emulation exercise we mimic a real world cyber attack with a specific objective, such as stealing customer data, launching a ransomware attack etc. This course follows the Red Team Operations Attack Lifecycle to conduct this exercise. We go through each phase in a step-by-step manner and build our attack path as we move ahead. We employee a variety of techniques, such as
 
-    Active and passive information gathering
-    Gaining foothold into the network
-    Host Discovery
-    Brute-forcing
-    Phishing
-    Privilege Escalation (Linux and Windows)
-    Automated Active Directory domain enumeration
-    Persistence via command and control center
-    Active Directory attacks
+    - Active and passive information gathering
+    - Gaining foothold into the network
+    - Host Discovery
+    - Brute-forcing
+    - Phishing
+    - Privilege Escalation (Linux and Windows)
+    - Automated Active Directory domain enumeration
+    - Persistence via command and control center
+    - Active Directory attacks
 
  
 to achieve our objective. Upon completion of the exercise, we will prepare and submit a report to Tax First Labz management.    
