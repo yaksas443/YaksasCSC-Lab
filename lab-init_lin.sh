@@ -6,7 +6,7 @@ passwd
 
 #Enabling logging on terminal launch and creating log directory
 
-echo 'test "$(ps -ocommand= -p $PPID | awk '"'"'{print $1}'"'"')" == '"'"'script'"'"' || (script -f $HOME/logs/$(date +"%d-%b-%y_%H-%M-%S").${HOSTNAME:-$(hostname)}.$$.${RANDOM}_shell.log)' >> /etc/bash.bashrc
+echo 'test "$(ps -ocommand= -p $PPID | awk '"'"'{print $1}'"'"')" == '"'"'script'"'"' || (script -f $HOME/logs/$(date +"%d-%b-%y_%H-%M-%S").${HOSTNAME:-$(hostname)}.$$.${RANDOM}_shell.log)' >> /home/kali/.zshrc
 mkdir $HOME/logs
 sudo -u kali mkdir /home/kali/logs
 
