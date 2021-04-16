@@ -10,3 +10,5 @@
 - prefix key + $ - to rename session 
 - prefix key + space - to re-arrange split windows
 - prefix key + <number> - to move to a window
+- prefix key (CTRL+a) + SHIFT + P - to start / end logging
+- prefix key (CTRL+a) + ALT + SHIFT + P - to save current session in a log file
