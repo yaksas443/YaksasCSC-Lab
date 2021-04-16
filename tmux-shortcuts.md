@@ -1,7 +1,7 @@
 ## Tmux Shortcuts
 
-- tmux new -s <session name>
-- tmux attach -t <session name>
+- tmux new -s [session name] - to create a new Tmux session
+- tmux attach -t [session name] - to attach to an existing session
 - prefix key + d - to detach
 - prefix key + c - to create new window
 - prefix key + % - to split vertically
