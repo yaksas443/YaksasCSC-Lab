@@ -9,3 +9,4 @@ Standard port scan with host discovery disabled
 Check for SQL injection in a GET based login request (takes a request file)
 
 - ```sqlmap -r login.req --batch```
+- ```sqlmap -r login.req --batch -level 5 --risk 3 ```
