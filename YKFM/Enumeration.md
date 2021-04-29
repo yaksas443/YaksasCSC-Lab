@@ -16,3 +16,8 @@ Check for SQL injection in a GET based login request (takes a request file)
 Validate a list of users via Kerberos
 
 - ```/opt/kerbrute_linux_amd64 userenum --dc 10.10.10.193 -d fabricorp.local userlist.txt```
+
+## Tool: gobuster
+
+Discover web content
+- ```gobuster dir -u http://10.10.245.252:3333 -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt```
