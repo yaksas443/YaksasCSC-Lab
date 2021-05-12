@@ -1,3 +1,9 @@
+## Check for SPF, DKIM and DMARC records
+
+- ```dig +short TXT domain.com``` 
+- ```dig dkim._domainkey.domain.com TXT```
+- ```dig +short TXT _dmarc.domain.com```
+
 ## Tool: nmap
 
 Standard port scan with host discovery disabled
