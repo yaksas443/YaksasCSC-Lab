@@ -7,6 +7,7 @@
 
 ### Macro leveraging file properties to hide its payload and StdIn to avoid logging 
 ```vbscript
+# Source: https://gist.github.com/anonymous/70939438968194d2b0f4d5d2cc53c45e
 Public Sub PrintDocumentProperties()
     Dim oApp As New Excel.Application
     Dim oWB As Workbook
