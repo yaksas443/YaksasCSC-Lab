@@ -142,8 +142,8 @@
 ### Search for interesting ACEs
 - Invoke-ACLScanner -ResolveGUIDs
 - Get-NetGPO | %{Get-ObjectAcl -ResolveGUIDs -Name $_.Name} | ?{$_.IdentityReference -match "ind"}
-- Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReference - match "ind"}
-- Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReference - match "RDPUsers"}
+- Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReference -match "ind"}
+- Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReference -match "RDPUsers"}
 
 ### Get the ACLs associated with the specified path
 - Get-PathAcl -Path "\\dcorp-dc.dollarcorp.moneycorp.local\sysvol"
