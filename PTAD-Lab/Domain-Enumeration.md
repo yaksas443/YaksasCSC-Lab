@@ -91,7 +91,7 @@
 - Get-NetLoggedon –ComputerName <servername>
 
 ### Get locally logged users on a computer (needs remote registry on the target - started by-default on server OS)
-- Get-LoggedonLocal -ComputerName dcorp- dc.dollarcorp.moneycorp.local
+- Get-LoggedonLocal -ComputerName dcorp- ycsc-ind-dc.ind.ycsccorp.local
 
 ### Get the last logged user on a computer (needs administrative rights and remote registry on the target)
 - Get-LastLoggedOn –ComputerName <servername>
