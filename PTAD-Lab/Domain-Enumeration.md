@@ -131,7 +131,7 @@
 ## ACL Enumeration
 
 ### Get the ACLs associated with the specified object
-- Get-ObjectAcl -SamAccountName <Objectname> -ResolveGUIDs
+- Get-ObjectAcl -SamAccountName user.ind01 -ResolveGUIDs
   
 ### Get the ACLs associated with the specified prefix to be used for search
  - Get-ObjectAcl -ADSprefix 'CN=Administrator,CN=Users' -Verbose
