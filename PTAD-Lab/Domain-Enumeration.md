@@ -184,6 +184,7 @@
 ### Find computers where a domain admin (or specified user/group) has sessions:
 - Invoke-UserHunter
 - Invoke-UserHunter -GroupName "RDPUsers"
+- Get-NetSession -Computername ycsc-ind-dc
 
 ### To confirm admin access
 - Invoke-UserHunter -CheckAccess
