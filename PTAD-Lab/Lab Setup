@@ -27,3 +27,17 @@ Building and Attacking an Active Directory lab with PowerShell	 - https://1337re
     net group “Domain Admins” user1 /add
 
 To resolve "Specified domain already exists" - run NewSID or Sysprep (located in C:\Windows\System32\sysprep folder)  - https://www.experts-exchange.com/questions/26394641/DCPromo-The-Specified-Domain-Already-Exists.html
+
+## Commands to configure servers and machines
+
+```powershell
+$hostname = hostname
+Rename-Computer -ComputerName $hostname -NewName "tfl-dev-jk-71" -LocalCredential Administrator -Force
+$ifindex = Get-NetAdapter | Where-Object Status -eq "Up" | select ifindex -ExpandProperty ifindex
+New-NetIPAddress -InterfaceIndex $ifindex -IPAddress 192.168.3.71
+Set-NetIPAddress -InterfaceIndex $ifindex -IPAddress 192.168.3.71 -PrefixLength 24
+Set-DnsClientServerAddress -InterfaceIndex $ifindex -ServerAddresses ("192.168.3.80")
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
+Set-MpPreference -DisableRealtimeMonitoring $true
+Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6
+```
